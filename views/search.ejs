@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>
+        <%= title %>
+    </title>
+</head>
+
+<body>
+    <h1>
+        <%= title%>
+    </h1>
+    <ul>
+        <% if (locals.searchResults) {%>
+            <% searchResults.forEach(result=> { %>
+                <li>Name: <%=result.firstName>
+                        <%=result.lastName>
+
+                </li>
+
+
+                <% });>
+
+    </ul>
+</body>
+
+
+</html>
