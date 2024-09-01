@@ -24,6 +24,16 @@ class UsersStorage {
         this.storage[id] = { id, firstName, lastName };
     }
 
+    searchFirstName(searchQuery) {
+        let results = [];
+        for (let key in this.storage) {
+            if (this.storage[key].firstName === searchQuery) {
+                results.push(this.storage[key]);
+            }
+        }
+        return results;
+    }
+
     deleteUser(id) {
         delete this.storage[id];
     }

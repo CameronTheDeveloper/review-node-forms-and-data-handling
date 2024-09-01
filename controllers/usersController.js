@@ -77,5 +77,8 @@ exports.usersDeletePost = (req, res) => {
 };
 
 exports.usersSearchGet = (req, res) => {
-    res.json({ firstNameSearch: req.query.fNameSearch });
+    const searchResult = usersStorage.searchFirstName(req.query.fNameSearch);
+    res.json({
+        firstNameResult: searchResult,
+    });
 };
